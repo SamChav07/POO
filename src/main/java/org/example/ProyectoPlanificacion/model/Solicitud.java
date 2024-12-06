@@ -10,6 +10,7 @@ import org.openxava.model.Identifiable;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
@@ -21,11 +22,13 @@ import java.util.Set;
 
 public class Solicitud extends Identifiable {
     private LocalDate fecha;
+
     @ManyToOne(fetch = FetchType.EAGER)
     @ReferenceView("simple")
     private Coordinador solicitante;
     //@Required
     private TIPOSOLICITUD tipoSolicitud;
+
 
     /*
     @ElementCollection(fetch = FetchType.EAGER)

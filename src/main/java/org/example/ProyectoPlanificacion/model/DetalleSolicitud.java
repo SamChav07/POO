@@ -3,6 +3,7 @@ package org.example.ProyectoPlanificacion.model;
 import lombok.Getter;
 import lombok.Setter;
 import org.openxava.annotations.ListProperties;
+import org.openxava.annotations.View;
 import org.openxava.model.Identifiable;
 
 import javax.persistence.*;
@@ -11,6 +12,7 @@ import java.util.Collection;
 @Entity
 @Getter
 @Setter
+@View(name = "none")
 public class DetalleSolicitud extends Identifiable {
 
 
