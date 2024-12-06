@@ -19,16 +19,18 @@ public class Asignacion extends Identifiable {
     @JoinColumn(name = "ambiente_id", referencedColumnName = "id")
     private Ambiente ambiente;
 
+
     //@ReferenceView("simple")
     @ManyToOne
     @JoinColumn(name="actividad_id", referencedColumnName = "id")
     private Actividad actividad;
 
+
     @Enumerated(EnumType.STRING)
     private HORARIO horario;
+
 
     @ManyToOne
     @JoinColumn(name="proyeccion_id")
     private Proyeccion proyeccion;
-
 }
